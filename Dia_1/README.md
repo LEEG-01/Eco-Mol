@@ -9,6 +9,12 @@ Primeiro, instale a ferramenta `gdown`, que permite baixar arquivos e pastas do 
 ```bash
 conda install -c conda-forge gdown
 
+mkdir data
+
+cd data
+
+gdown --folder https://drive.google.com/drive/folders/1wFpFSaT4xzVpjIs0ACVK4b2fnjpvHUsx
+```
 
 # Aula Prática 1 — Montagem de Genoma  
 **Long reads + Short reads**
