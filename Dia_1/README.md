@@ -1,3 +1,15 @@
+## Download dos dados da aula
+Os arquivos necessários para esta prática estão disponíveis no Google Drive.
+Pasta com os dados:  
+https://drive.google.com/drive/folders/1wFpFSaT4xzVpjIs0ACVK4b2fnjpvHUsx
+
+### Baixar diretamente no servidor (recomendado)
+Primeiro, instale a ferramenta `gdown`, que permite baixar arquivos e pastas do Google Drive via linha de comando.
+
+```bash
+conda install -c conda-forge gdown
+
+
 # Aula Prática 1 — Montagem de Genoma  
 **Long reads + Short reads**
 
