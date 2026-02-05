@@ -1,6 +1,6 @@
 # Montagem, Anotação e Análise de Variantes Genômicas
 
-# Curso Prático Hands-on
+## Curso Prático Hands-on
 
 # Visão geral
 
