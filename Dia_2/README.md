@@ -7,36 +7,41 @@ Rodar dentro da pasta annotation (Dentro de Aula_2):
 ```bash
 mkdir repeats
 ```
-3. Construir biblioteca de repetições (RepeatModeler)
+2. Construir biblioteca de repetições (RepeatModeler)
+Para a prática, nós usamos o RepeatModeler para criar uma base de dados de repeats específica de *A. thaliana* dentro da pasta annotation/repeats. Este passo é computacionalmente pesado, então não precisa rodar na aula.:
 
-Para a prática, nós usamos o RepeatModeler para criar uma base de dados de repeats específica de A. thaliana dentro da pasta annotation/repeats. Este passo é computacionalmente pesado, então não precisa rodar na aula.:
-
+```bash
 BuildDatabase -name at_db ../reference/GCA_000001735.2_TAIR10.1_genomic.fna
-
+```
+```bash
 RepeatModeler -database at_db -threads 4
-
-O RepeatModeler gera vários arquivos referentes à anotação dentro de pastas com um código representando a corrida. Para a próxima etapa da prática, usaremos apenas o arquivo consensi.fa.classified cuja cópia já está disponível na pasta annotation enviada à vocês. O arquivo contém sequências consenso dos repeats encontrados em A. thaliana, já classificados de acordo com a nomenclatura usual. O RepeatMasker usará este arquivo como referência para anotar o genoma completo.
+```
+O RepeatModeler gera vários arquivos referentes à anotação dentro de pastas com um código representando a corrida. Para a próxima etapa da prática, usaremos apenas o arquivo *consensi.fa.classified* cuja cópia já está disponível na pasta annotation enviada à vocês. O arquivo contém sequências consenso dos repeats encontrados em *A. thaliana*, já classificados de acordo com a nomenclatura usual. O RepeatMasker usará este arquivo como referência para anotar o genoma completo.
 
 3. Mascarar o genoma (RepeatMasker)
 Agora que temos uma base de dados customizada, podemos usar o RepeatMasker para anotar e mascarar nosso genoma.
-
+```bash
 RepeatMasker \
   -pa 4 \
   -lib ../consensi.fa.classified \
   -xsmall \
   -gff \
   ../reference/GCA_000001735.2_TAIR10.1_genomic.fna
-
+```
 O RepeatMasker gera os arquivos de output na mesma pasta onde está o genoma de referência utilizado. Para esta prática, os arquivos foram copiados para a spoilers_anno/repeats. Navegue até ela e vamos conferir alguns dos outputs mais importantes:
-
+```bash
 head GCA_000001735.2_TAIR10.1_genomic.fna.masked
+```
+```bash
 head GCA_000001735.2_TAIR10.1_genomic.fna.out
+```
+```bash
 head GCA_000001735.2_TAIR10.1_genomic.fna.out.gff
-
+```
+```bash
 grep -v "^#" GCA_000001735.2_TAIR10.1_genomic.fna.tbl
-
-
-Anotação estrutural de genes 
+```
+##Anotação estrutural de genes 
 
 Ative o ambiente:
 $ conda activate genome_assembly_course
