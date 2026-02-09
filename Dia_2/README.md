@@ -51,12 +51,16 @@ conda install -c conda-forge -c bioconda gffcompare -y
 ```
 ## Helixer  - software de anotação de novo de genomas eucarióticos
 Artigo - https://doi.org/10.1093/bioinformatics/btaa1044
+
 Site - https://www.plabipd.de/helixer_main.html
-Helixer é um software de anotação estrutural de genomas baseado em Deep Learning. Diferente de métodos clássicos, ele aprende padrões biológicos diretamente das sequências. Ab initio assistido por aprendizado de máquina. Não precisa de RNA-seq ou proteínas (mas pode ser refinado depois).
+
+Helixer é um software de anotação estrutural de genomas baseado em *deep learning*. Diferente de métodos clássicos, ele aprende padrões biológicos diretamente das sequências. Ab initio assistido por aprendizado de máquina. Não precisa de RNA-seq ou proteínas (mas pode ser refinado depois).
 
 ## EviAnn  - software de anotação de genomas eucarióticos baseado em evidências
 Artigo - https://www.biorxiv.org/content/10.1101/2025.05.07.652745v2 
+
 GitHUB - alekseyzimin/EviAnn_release: This is the standalone version of the EviAnn pipeline 
+
 É baseado em evidências (RNA-seq + proteínas de espécies próximas suporte evolutivo + genoma FASTA).
 IMPORTANTE: Atenção mascarar genoma antes da anotação!  
 1. Organizar arquivos:
@@ -124,7 +128,8 @@ samtools sort -@ 4 \
 Entrar em: https://www.uniprot.org/ 
 Buscar por Brassicaceae
 Fazer download de todas as proteínas “Reviewed(Swiss-Prot)
- O arquivo já está baixado na pasta annotation/prot
+O arquivo já está baixado na pasta annotation/prot
+
 5.  Rodar EviAnn
 Para rodar o EviAnn é necessário criar um arquivo de texto com uma lista de BAMs para usarmos como referência extrínseca de rna-seq. 
 ```bash
@@ -153,8 +158,10 @@ gffcompare -r ATH_original_genomic.chromfix.gff3 \
 Referência
 ~59.396 mRNAs em 36.963 loci
 Representa um conjunto rico e complexo (TAIR do assembly)
+
 7. Galaxy web server  
 Galaxy é uma plataforma online de bioinformática que permite rodar análises complexas sem usar linha de comando.
+História Galaxy : **https://usegalaxy.org/u/leeg-01/h/ecologia-molecular**
 - É como um laboratório virtual
 - Tudo roda em servidor
 - Você usa por interface gráfica
@@ -206,7 +213,6 @@ Testes estatísticos (GO enrichment)
 
 **REVIGO**
 O REVIGO é uma ferramenta online usada para resumir e organizar listas de termos de Gene Ontology (GO), especialmente após análises de enriquecimento funcional. Em estudos genômicos e transcriptômicos, é comum obter listas extensas de termos GO, muitas vezes redundantes ou semanticamente muito semelhantes. O REVIGO resolve esse problema ao calcular a similaridade semântica entre os termos e remover aqueles repetitivos ou pouco informativos, agrupando-os em categorias mais representativas. Como resultado, ele gera visualizações como gráficos de dispersão, treemaps e tabelas resumidas que facilitam a interpretação biológica dos dados. 
-Site : http://revigo.irb.hr/
+Site : **http://revigo.irb.hr/**
 
  
-https://usegalaxy.org/u/leeg-01/h/ecologia-molecular
