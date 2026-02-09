@@ -82,6 +82,7 @@ for srr in SRR3581356 SRR3581681 SRR3581693 SRR3581703 SRR3581705 SRR3581706 SRR
 done
 ```  
 3. Mapear evidências de RNA-Seq (HISAT2)
+   
 3.1 Indexar genoma
 Construir o índice do genoma (só 1 vez)
 ```bash
@@ -115,6 +116,7 @@ hisat2 -p 8 \
 | samtools view -@ 4 \
 > results_anno_dri/bam/SRRXXXXXX.bam
 ```
+
 Depois disso é necessário ordenar (sorting) e indexar o arquivo BAM
 ```bash
 samtools sort -@ 4 \
@@ -170,6 +172,7 @@ Acessar o Galaxy: https://usegalaxy.org
 Criar conta → login
 Enviar arquivos gff3 de todas as anotações incluindo do artigo original 
 Transformar arquivos GFF3 em Fasta de proteínas 
+
 Na barra de ferramentas, digitar:
 # BUSCO: Assess genome assembly and annotation completeness
 Configurar 
@@ -178,6 +181,7 @@ Mode    **proteins**
 Lineage dataset    **embryophyta_odb10 (plantas)**
 Clique em **Run**
 Interpretar resultado
+
 33.741 out of 33741 consensus transcripts written in gffcmp.combined.gtf
 O gffcompare gerou uma anotação integrada
 # Atividade:  Comparando as duas anotações estruturais geradas nesta aula prática com os resultados reportados no artigo de referência (abaixo), qual pipeline apresentou melhor desempenho e por quê? Discuta quais métricas suportam essa conclusão (ex.: BUSCO, número de genes/transcritos, completude/fragmentação), e indique qual pipeline você recomendaria para análises futuras, justificando sua escolha.
