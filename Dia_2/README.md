@@ -184,9 +184,9 @@ Interpretar resultado
 
 33.741 out of 33741 consensus transcripts written in gffcmp.combined.gtf
 O gffcompare gerou uma anotação integrada
-## Atividade:  Comparando as duas anotações estruturais geradas nesta aula prática com os resultados reportados no artigo de referência (abaixo), qual pipeline apresentou melhor desempenho e por quê? Discuta quais métricas suportam essa conclusão (ex.: BUSCO, número de genes/transcritos, completude/fragmentação), e indique qual pipeline você recomendaria para análises futuras, justificando sua escolha.
+**Atividade:  Comparando as duas anotações estruturais geradas nesta aula prática com os resultados reportados no artigo de referência (abaixo), qual pipeline apresentou melhor desempenho e por quê? Discuta quais métricas suportam essa conclusão (ex.: BUSCO, número de genes/transcritos, completude/fragmentação), e indique qual pipeline você recomendaria para análises futuras, justificando sua escolha.**
 
-## Anotação funcional de genes 
+**Anotação funcional de genes** 
 Galaxy
 Buscar por ferramenta **InterProScan (domínios proteicos)**
 Configurar
@@ -205,7 +205,7 @@ Saída tabular padrão do InterProScan, que integra:
 -	vias metabólicas (MetaCyc, Reactome)
 -	Interpretação biológica do exemplo: Essa proteína tem 642 aa; contém um domínio de ligação a ATP; pertence à família das proteínas quinases; participa de vias de sinalização (Reactome); função molecular bem definida (ATP binding);
 
-## Atividade: Escolha um domínio PFAM, descreva quantas proteinas você encontra para esse dominio e qual a função para a planta.
+**Atividade: Escolha um domínio PFAM, descreva quantas proteinas você encontra para esse dominio e qual a função para a planta.**
 
 Observações importantes :
 Cada proteína pode contar mais de uma via;
