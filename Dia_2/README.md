@@ -2,7 +2,7 @@
 ## Anotação estrutural do genoma
 ### Anotação de DNA Repetitivo com RepeatModeler e RepeatMasker
 1. Organizar arquivos 
-Rodar dentro da pasta annotation (Dentro de Aula_2):
+Rodar dentro da pasta annotation (dentro de Aula_2):
 ```bash
 mkdir repeats
 ```
